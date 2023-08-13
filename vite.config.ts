@@ -11,5 +11,9 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [{ find: '@src', replacement: path.resolve(__dirname, 'src') }],
+  },
+
+  server: {
+    host: '0.0.0.0',
   }
 })
