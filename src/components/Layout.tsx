@@ -1,17 +1,16 @@
 import { Header } from "./Header"
-import Footer from "./Footer"
+import { Footer } from "./Footer"
+import { Divider, Box } from "@chakra-ui/layout"
 
-
-interface Props {
-    children: React.ReactNode
-  }
 
 export const Layout = ({ children }: Props) => {
   return (
     <>
-    <Header />
-    { children }
-    <Footer/>
+      <Header />
+      {children}
+      <Divider my={10} orientation='horizontal' />
+      <Footer />
+      <Box mb={20} />
     </>
   )
 }

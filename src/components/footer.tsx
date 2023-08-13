@@ -19,7 +19,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <Box py={4}>
@@ -28,11 +28,10 @@ const Footer = () => {
           flexDirection={{ base: "column", md: "row" }}
           alignItems="center"
           justifyContent="space-between"
-          maxW="container.xl"
+          maxW="90%"
         >
           <Stack mb={{ base: 4, md: 0 }} order={{ base: 2, md: 1 }}>
             <Text
-              border="solid red 1px"
               maxW={{ base: "100%", md: "container.sm" }}
               textAlign="center"
               fontSize=""
@@ -41,8 +40,8 @@ const Footer = () => {
               Landify
             </Text>
           </Stack>
-          <HStack mb={{ base: 4, md: 0 }} order={{ base: 1, md: 2 }}>
-            <Text fontSize="sm">Connect</Text>
+          <HStack mb={{ base: 4, md: 0 }} order={{ base: 1, md: 2 }} spacing={5}>
+            <Text fontSize="sm" textTransform="uppercase" fontWeight="600">Connect</Text>
             <Divider
               orientation="horizontal"
               height="1px"
@@ -60,5 +59,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

@@ -7,6 +7,7 @@ import { StartProjectSection } from "./StartProjectSection"
 import { KickStartSection } from "./KickStartSection"
 import { TestimonialSection } from "./TestimonialSection"
 import { MarqueSection } from "./MarqueSection"
+import { ContactUsSection } from "./ContactUsSection"
 
 
 export const LandingPage = () => {
@@ -27,6 +28,8 @@ export const LandingPage = () => {
       <StartProjectSection />
       <Box my={20}></Box>
       <KickStartSection />
+      <Box my={20}></Box>
+      <ContactUsSection />
     </>
   )
 }

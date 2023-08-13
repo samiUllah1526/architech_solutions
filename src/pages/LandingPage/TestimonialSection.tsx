@@ -15,6 +15,8 @@ import { SectionTitle } from './SectionTitle'
 import { SectionSubTitle } from './SectionSubTitle'
 import { Carousel, QuotationMarkSvg } from '@src/components/svgs';
 
+
+
 export const TestimonialSection = () => {
     return (
         <>
@@ -30,7 +32,7 @@ export const TestimonialSection = () => {
                 </Box>
                 <Box my={10}></Box>
                 <Carousel>
-                {/* <HStack justifyContent="space-between" > */}
+                    {/* <HStack justifyContent="space-between" > */}
                     {
                         [
                             {
@@ -52,7 +54,7 @@ export const TestimonialSection = () => {
                             {
 
                                 name: 'Robert Anyino',
-                                designation:"Product Manager",
+                                designation: "Product Manager",
                                 testimonial: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
                             },
                             {
@@ -74,26 +76,26 @@ export const TestimonialSection = () => {
                             {
 
                                 name: 'Robert Anyino',
-                                designation:"Product Manager",
+                                designation: "Product Manager",
                                 testimonial: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
                             },
                         ]
                             .map((item, index) => {
                                 return (
-                   
+
                                     <Card key={index} maxW='lg' p={10} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
                                         <CardBody>
                                             <HStack spacing={5} alignItems="start">
-                                                <QuotationMarkSvg colored={index % 2 === 0}/>
+                                                <QuotationMarkSvg colored={index % 2 === 0} />
                                                 <Box >
-                                                <Heading as='h2' fontSize="24px" color="primary">
-                                                    {item.name}
-                                                </Heading>
-                                                <Heading as='h2' fontSize="16px" mt={2}>
-                                                    {item.designation}
-                                                </Heading>
+                                                    <Heading as='h2' fontSize="24px" color="primary">
+                                                        {item.name}
+                                                    </Heading>
+                                                    <Heading as='h2' fontSize="16px" mt={2}>
+                                                        {item.designation}
+                                                    </Heading>
                                                 </Box>
-                                                
+
                                             </HStack>
                                             <Box my={5}></Box>
                                             <Text fontSize="14px ">
