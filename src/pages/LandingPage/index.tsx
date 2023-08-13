@@ -4,6 +4,7 @@ import { HeroSection } from "./HeroSection"
 import { ServicesSection } from "./ServicesSection"
 import { WorkflowSection } from "./WorkflowSection"
 import { StartProjectSection } from "./StartProjectSection"
+import { KickStartSection } from "./KickStartSection"
 
 export const LandingPage = () => {
   return (
@@ -17,6 +18,8 @@ export const LandingPage = () => {
       <WorkflowSection />
       <Box my={20}></Box>
       <StartProjectSection />
+      <Box my={20}></Box>
+      <KickStartSection />
     </>
   )
 }

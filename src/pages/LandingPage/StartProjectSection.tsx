@@ -29,7 +29,6 @@ export const StartProjectSection = () => {
                             <Text color="white" fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text>
                             <Box mb={10}></Box>
                             <Button
-                            size='lg'
                                 variant='solid'
                             >Start New</Button>
                         </Box>
