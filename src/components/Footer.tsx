@@ -47,8 +47,7 @@ export const Footer = () => {
               height="1px"
               width="60px"
               bg="black"
-            />
-
+            />    
             <IconButton aria-label="Facebook" icon={<FaceBookSvg />} />
             <IconButton aria-label="Instagram" icon={<InstaGramSvg />} />
             <IconButton aria-label="YouTube" icon={<YouTubeSvg />} />
