@@ -11,11 +11,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
-import { OpenIcon } from './svgs'
 
-interface Props {
-  children: React.ReactNode
-}
 
 const leftLinks = ['home', 'projects', 'clients']
 const rightLinks = ['about Us', 'gallery']
