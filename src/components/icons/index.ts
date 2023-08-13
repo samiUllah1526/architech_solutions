@@ -1,1 +1,0 @@
-export  { OpenIcon } from "./Open";

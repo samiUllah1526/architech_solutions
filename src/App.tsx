@@ -4,12 +4,13 @@ import './App.css'
 
 import { Layout } from '@src/components'
 import { theme } from './theme'
+import { LandingPage } from './pages'
 
 export default function App() {
   return (
     <ChakraProvider theme={theme}>
     <Layout>
-      <h1>Sami</h1>
+      <LandingPage></LandingPage>
     </Layout>
     </ChakraProvider>
   )
