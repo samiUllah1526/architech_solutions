@@ -11,7 +11,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
-import { OpenIcon } from './icons'
+import { OpenIcon } from './svgs'
 
 interface Props {
   children: React.ReactNode
@@ -43,8 +43,8 @@ export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <>
-      <Container maxW='90%' bg="transparent">
+    <Box mb="20">
+      <Container maxW='90%' bg="transparent" py={3}>
         <Box bg={useColorModeValue('transparent', 'gray.900')} px={4}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
@@ -68,10 +68,10 @@ export function Header() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
               <Button
+              size='md'
                 variant='solid'
                 rightIcon={<AddIcon />}
               >Contact US</Button>
-
             </HStack>
           </Flex>
 
@@ -88,6 +88,6 @@ export function Header() {
       </Container>
       <Box bg="customegrey" height="1px" mb="2px"></Box>
       <Box bg="customegrey" height="1px"></Box>
-    </>
+    </Box>
   )
 }

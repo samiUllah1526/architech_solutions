@@ -10,4 +10,8 @@
   box-sizing: border-box;
   background: '#ffffff';
 }
-   
+
+.slick-track {
+  display: flex !important;
+  gap: 10px;
+}
