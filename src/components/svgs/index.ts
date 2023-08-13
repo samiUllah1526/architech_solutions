@@ -5,4 +5,8 @@ export { RenovationServiceSvg } from "./RenovationServiceSvg";
 export { DesignServiceSvg } from "./DesignServiceSvg";
 export { AboutUsBadgeSvg } from "./AboutUsBadgeSvg";
 export { HeroCTASvg } from "./HeroCTASvg";
-export  { OpenIcon } from "./Open";
+// export  { OpenIcon } from "./Open";
+export {TwitterSvg} from "./TwitterSvg";
+export {FaceBookSvg} from "./FaceBookSvg";
+export {YouTubeSvg} from "./YouTubeSvg"
+export {InstaGramSvg} from "./InstaGramSvg";
