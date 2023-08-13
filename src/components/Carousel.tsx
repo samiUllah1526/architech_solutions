@@ -50,7 +50,7 @@ const settings = {
       ]
 }
 
-export function Carousel({ children }) {
+export function Carousel({ children }: Props) {
   return (
     <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
       {/* CSS files for react-slick */}
