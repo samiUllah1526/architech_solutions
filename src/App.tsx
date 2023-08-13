@@ -8,7 +8,7 @@ import { LandingPage } from './pages'
 
 export default function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} resetCSS={true}>
     <Layout>
       <LandingPage></LandingPage>
     </Layout>

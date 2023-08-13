@@ -1,3 +1,5 @@
+export { Carousel } from "../Carousel";
+export { QuotationMarkSvg } from "./QuotationMarkSvg";
 export { ManagementServiceSvg } from "./ManagementServiceSvg";
 export { RenovationServiceSvg } from "./RenovationServiceSvg";
 export { DesignServiceSvg } from "./DesignServiceSvg";
