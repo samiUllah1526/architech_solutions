@@ -52,9 +52,9 @@ customegrey: #D9D9D6;
 
 */
 export const theme = extendTheme({
-    components: {
-        Button,
-      },
+  components: {
+    Button,
+  },
   colors: {
     black: '#2C2C2C',
     white: '#FFFFFF',
@@ -65,4 +65,5 @@ export const theme = extendTheme({
     heading: 'Montserrat, sans-serif, Syncopate',
     body: 'Montserrat, sans-serif, Syncopate',
   },
+
 });
