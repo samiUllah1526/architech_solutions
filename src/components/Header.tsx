@@ -68,10 +68,10 @@ export function Header() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
               <Button
+              size='md'
                 variant='solid'
                 rightIcon={<AddIcon />}
               >Contact US</Button>
-
             </HStack>
           </Flex>
 
