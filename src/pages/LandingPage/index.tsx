@@ -27,8 +27,8 @@ export const LandingPage = () => {
       <Box my={-48}></Box>
       <StartProjectSection />
       <Box my={20}></Box>
-      <KickStartSection />
-      <Box my={20}></Box>
+      {/* <KickStartSection />
+      <Box my={20}></Box> */}
       <ContactUsSection />
     </>
   )

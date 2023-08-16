@@ -15,7 +15,7 @@ import marquee1 from '@src/assets/marquee1.png'
 
 export const MarqueSection = () => {
     return (
-        <>
+        <div id="gallery">
 
             <Marquee>
                 {
@@ -42,6 +42,6 @@ export const MarqueSection = () => {
                 <Text fontSize="48px" fontWeight="700" mx={5}>concrete graden</Text>
                 <Text fontSize="48px" fontWeight="700" mx={5} color="primary">city vision uncovered</Text>
             </Marquee>
-        </>
+        </div>
     )
 }

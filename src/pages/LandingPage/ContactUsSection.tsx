@@ -10,7 +10,7 @@ import {
 export const ContactUsSection = () => {
     return (
         <>
-            <Box py={20} bg="black">
+            <Box id="contactUs" py={20} bg="black">
                 <Container maxW='90%' bg="transparent">
                     <Heading as='h2' size='xl' color="white">
                         Contact Us
@@ -27,19 +27,40 @@ export const ContactUsSection = () => {
                         </Box>
                         <Box height="325px" width="2px" bg="white" />
                         <Box>
-                            <Text color="white" fontSize='28px' fontWeight='300px'>
-                                Our E-mail
-                            </Text>
-                            <Text color="white" fontSize='24px' fontWeight='300px'>
-                                contact@architectural.com
-                            </Text>
-                            <Box my={5} />
-                            <Text color="white" fontSize='28px' fontWeight='300px'>
-                                Our Phone
-                            </Text>
-                            <Text color="white" fontSize='24px' fontWeight='300px'>
-                                +1 408 568 4657
-                            </Text>
+                            {
+                                [
+                                    {
+                                        label: "Phone ",
+                                        content: "(203)547-3030",
+                                    },
+                                    {
+                                        label: "Website",
+                                        content: "architechsolution.com",
+
+                                    },
+                                    {
+                                        label: "E-mail",
+                                        content: "lenaDelphine@architechsolution.com"
+
+                                    },
+                                    {
+                                        label: "Address ",
+                                        content: "1001 S MAIN ST STE 500 KALISPELL, MT 59901",
+                                    },
+                                ].map(({ label, content }) => {
+                                    return (
+                                        <>
+                                            <Text color="white" fontSize='28px' fontWeight='300px'>
+                                                {label}
+                                            </Text>
+                                            <Text color="white" fontSize='16px' fontWeight='300px'>
+                                                {content}
+                                            </Text>
+                                            <Box my={5} />
+                                        </>
+                                    )
+                                })
+                            }
                         </Box>
                     </HStack>
                 </Container>

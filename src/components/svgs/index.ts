@@ -1,3 +1,4 @@
+export { Logo } from "./Logo";
 export { Carousel } from "../Carousel";
 export { QuotationMarkSvg } from "./QuotationMarkSvg";
 export { ManagementServiceSvg } from "./ManagementServiceSvg";

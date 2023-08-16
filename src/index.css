@@ -9,9 +9,12 @@
   padding: 0;
   box-sizing: border-box;
   background: '#ffffff';
+  scroll-behavior: smooth;
 }
 
 .slick-track {
   display: flex !important;
+  align-items: stretch !important;
   gap: 10px;
 }
+

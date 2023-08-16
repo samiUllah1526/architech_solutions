@@ -18,14 +18,20 @@ export const HeroSection = () => {
             </Center>
             <Box mt={10} mb={10}></Box>
             <Center>
-                <Text maxW='45%' align="center">We turn your empty house to a lovely home, making the compact spaces  with sapce saving furnitures. Making the unique tastes of yours into reality! </Text>
+                <Text maxW='45%' align="center">
+                    Transforming Concepts into
+                    Masterpieces: Elevating Spaces
+                    through Impeccable Architectural
+                    3D Modeling and Rendering
+                    Services
+                </Text>
             </Center>
             <Box mt={10} mb={24}></Box>
             <Box position="relative" >
                 <Image objectFit='cover' src={heroImage} alt='Dan Abramov' />
                 <Box position="absolute" top="-80px" left="150px">
                     <HeroCTASvg />
-                </Box>
+                </Box> 
             </Box>
         </>
     )

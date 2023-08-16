@@ -9,6 +9,8 @@ import {
     SimpleGrid,
     Card,
     CardBody,
+    Grid,
+    GridItem
 } from '@chakra-ui/react'
 import { ManagementServiceSvg, RenovationServiceSvg, DesignServiceSvg } from '@src/components/svgs';
 import { SectionTitle } from './SectionTitle'
@@ -17,7 +19,7 @@ import { SectionSubTitle } from './SectionSubTitle'
 export const ServicesSection = () => {
     return (
         <>
-            <Container maxW='90%' bg="transparent" py={3}>
+            <Container id="services" maxW='90%' bg="transparent" py={3}>
                 <Box w="55%">
                     <Box>
                         <SectionTitle title='OUR SERVICES' />
@@ -30,44 +32,50 @@ export const ServicesSection = () => {
                     </Box>
                 </Box>
                 <Box my={10}></Box>
-                <HStack justifyContent="space-between" >
+                <Grid templateColumns='repeat(4, 1fr)' gap={6}>
                     {
                         [
                             {
                                 icon: <DesignServiceSvg />,
-                                number: "Architectural & Interior design",
-                                text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                number: "Client Consultation",
+                                text: "We begin by engaging in a thorough discussion with you to understand your project's goals, scope, and vision. We listen attentively to your ideas, preferences, and requirements, ensuring that we grasp every detail that matters to you."
                             },
                             {
                                 icon: <RenovationServiceSvg />,
-                                number: "Building Renovation",
-                                text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                number: "Conceptualization",
+                                text: "Once we have a clear understanding of your project, our team of skilled architects, designers, and 3D artists put their creative minds to work. We conceptualize your ideas into digital sketches and rough drafts that capture the essence of your vision."
                             },
                             {
                                 icon: <ManagementServiceSvg />,
-                                number: "Construciton Management",
-                                text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                number: "Design Development",
+                                text: "Building upon the initial concepts, we refine the design based on your feedback and preferences. This iterative process ensures that the evolving design aligns perfectly with your expectations and aspirations."
+                            },
+                            {
+                                icon: <ManagementServiceSvg />,
+                                number: "Delivery",
+                                text: "Once the 3D models and renderings are perfected, we deliver the final files to you. These files can be used for presentations, marketing materials, investor pitches, and more."
                             },
                         ]
                             .map((item, index) => {
                                 return (
-                                    <Card key={index} maxW='md' variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
-
-                                        <CardBody>
-                                            {item.icon}
-                                            <Box my={10}></Box>
-                                            <Heading as='h2' size='md'>
-                                                {item.number}
-                                            </Heading>
-                                            <Text fontSize="14px ">
-                                                {item.text}
-                                            </Text>
-                                        </CardBody>
-                                    </Card>
+                                    <GridItem w='100%' >
+                                        <Card key={index} h="100%" variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
+                                            <CardBody>
+                                                {item.icon}
+                                                <Box my={10}></Box>
+                                                <Heading as='h2' size='md'>
+                                                    {item.number}
+                                                </Heading>
+                                                <Text fontSize="14px ">
+                                                    {item.text}
+                                                </Text>
+                                            </CardBody>
+                                        </Card>
+                                    </GridItem>
                                 )
                             })
                     }
-                </HStack>
+                </Grid>
             </Container>
         </>
     )

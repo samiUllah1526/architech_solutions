@@ -17,16 +17,26 @@ import { SectionSubTitle } from './SectionSubTitle'
 export const AboutUsSection = () => {
     return (
         <>
-            <Container maxW='90%' bg="transparent" py={3}>
+            <Container maxW='90%' bg="transparent" py={3} id='aboutUs'>
                 <SimpleGrid columns={2} spacing={10}>
                     <Box>
                         <SectionTitle title='ABOUT US' />
                         <Box mb={10}></Box>
                         <SectionSubTitle subTitle="We help to bring your dream home to reality" />
                         <Box mb={10}></Box>
-                        <Text fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text>
+                        <Text fontSize='18px' fontWeight='300px'>
+                            At ArchitechSolution, we don't just
+                            create structures; we bring dreams
+                            to life in three-dimensional form.
+                            Our dedicated team of visionary
+                            architects and skilled 3D artists
+                            collaborate to turn your ideas into
+                            captivating, photorealistic
+                            renderings that allow you to see
+                            and feel the future space before
+                            it's even built.        
+                        </Text>
                         <Box mt={4} mb={0}></Box>
-                        <Text fontSize='18px' fontWeight='300px'>Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.</Text>
                     </Box>
 
                     <Box position="relative" >
