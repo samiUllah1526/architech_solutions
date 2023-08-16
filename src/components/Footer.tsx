@@ -25,10 +25,11 @@ export const Footer = () => {
       <Box py={4}>
         <Container
           display="flex"
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column", lg: "row" }}
+          gap={{ base: 5, lg: 0 }}
           alignItems="center"
           justifyContent="space-between"
-          maxW="90%"
+
         >
           <Stack mb={{ base: 4, md: 0 }} order={{ base: 2, md: 1 }}>
             <Text
@@ -40,18 +41,34 @@ export const Footer = () => {
               Landify
             </Text>
           </Stack>
-          <HStack mb={{ base: 4, md: 0 }} order={{ base: 1, md: 2 }} spacing={5}>
-            <Text fontSize="sm" textTransform="uppercase" fontWeight="600">Connect</Text>
+          <HStack
+            flexDirection={{ base: "column", lg: "row" }}
+            mb={{ base: 4, md: 0 }}
+            order={{ base: 1, md: 2 }}
+            spacing={5}>
+            <Text
+              fontSize="sm"
+              textTransform="uppercase"
+              fontWeight="600"
+            >
+              Connect
+            </Text>
             <Divider
               orientation="horizontal"
               height="1px"
               width="60px"
               bg="black"
-            />    
+            />
+                      <HStack
+            mb={{ base: 4, md: 0 }}
+            order={{ base: 1, md: 2 }}
+            spacing={5}>
             <IconButton aria-label="Facebook" icon={<FaceBookSvg />} />
             <IconButton aria-label="Instagram" icon={<InstaGramSvg />} />
             <IconButton aria-label="YouTube" icon={<YouTubeSvg />} />
             <IconButton aria-label="Twitter" icon={<TwitterSvg />} />
+            </HStack>
+              
           </HStack>
         </Container>
       </Box>

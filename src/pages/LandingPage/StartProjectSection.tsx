@@ -5,21 +5,15 @@ import {
     Button,
     Flex,
     Container,
-    HStack,
-    SimpleGrid,
-    Card,
-    CardBody,
 } from '@chakra-ui/react'
 import startProjectBg from '@src/assets/start-project-bg.png';
-import { SectionTitle } from './SectionTitle'
-import { SectionSubTitle } from './SectionSubTitle'
 
 export const StartProjectSection = () => {
     return (
         <>
             <Box py={20} style={{ background: `url(${startProjectBg})`, backgroundSize: 'cover', aspectRatio: "3/2" }}>
-                <Container maxW='90%' bg="transparent"  h="100%">
-                    <Flex justify='end' alignItems='end' h="100%">
+                <Container h="100%">
+                    <Flex justify={{base: "center" , lg:'end'}} alignItems={{base: "center" , lg:'end'}} h={{base: "auto", lg:"100%"}}>
                         <Box bg="lightBlack"  w='600px' p={10} >
                         <Button variant='outline'>Subscribe To Our Email</Button>
                         <Box mb={10}></Box>

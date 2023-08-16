@@ -18,8 +18,8 @@ export const WorkflowSection = () => {
     return (
         <>
             <Box position="relative" py={20} style={{ background: `url(${workflowBg})`  }} height="">
-                    <Container maxW='90%' bg="transparent" py={3} height="">
-                        <Box w="55%">
+                    <Container>
+                    <Box w={{ base: "100%", lg: "55%" }}>
                             <Box>
                                 <SectionTitle title='OUR WORKFLOW' />
                                 <Box mb={10}></Box>
@@ -29,7 +29,7 @@ export const WorkflowSection = () => {
                             </Box>
                         </Box>
                         <Box my={10}></Box>
-                        <HStack justifyContent="space-between" >
+                        <HStack justifyContent="space-between" alignItems="stretch"  flexDirection={{ base: "column", lg: "row" }}>
                             {
                                 [
                                     {
@@ -51,7 +51,7 @@ export const WorkflowSection = () => {
                                 ]
                                     .map((item, index) => {
                                         return (
-                                            <Card key={index} maxW='md' variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
+                                            <Card key={index} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
                                                 <CardBody>
                                                     <Heading as='h2' size='4xl' color="primary">
                                                         {item.number}

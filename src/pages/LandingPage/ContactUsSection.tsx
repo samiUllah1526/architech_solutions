@@ -5,27 +5,28 @@ import {
     Container,
     HStack,
     Input,
+    Flex
 } from '@chakra-ui/react'
 
 export const ContactUsSection = () => {
     return (
         <>
             <Box id="contactUs" py={20} bg="black">
-                <Container maxW='90%' bg="transparent">
+                <Container>
                     <Heading as='h2' size='xl' color="white">
                         Contact Us
                     </Heading>
                     <Text color="white" fontSize='18px' fontWeight='300px'>
                         If you are interested in our work and want to hire a project, contact us and ask for a price.
                     </Text>
-                    <HStack justifyContent="space-between">
-                        <Box>
-                            <Input my={10} placeholder='Your name' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
+                    <Flex justifyContent="space-between" flexDirection={{base: "column", xl: "row"}} gap={10}>
+                    <Box >
+                            <Input my={10} placeholder='Your name'  size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                             <Input mb={10} type="email" placeholder='Your email' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
-                            <Input mb={10} type="number" placeholder='Your number' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
+                            <Input mb={10} type="number" placeholder='Your number'   size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                             <Input placeholder='Message' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                         </Box>
-                        <Box height="325px" width="2px" bg="white" />
+                        <Box height={{ base: "2px", xl:"325px"}} width={{base: "50%", xl:"2px"}} marginInline={{base: "auto", xl: "0"}} bg="white" />
                         <Box>
                             {
                                 [
@@ -62,7 +63,7 @@ export const ContactUsSection = () => {
                                 })
                             }
                         </Box>
-                    </HStack>
+                    </Flex>
                 </Container>
             </Box>
         </>

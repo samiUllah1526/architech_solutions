@@ -19,7 +19,7 @@ export const KickStartSection = () => {
     return (
 
         <>
-            <Container maxW='90%' bg="transparent">
+            <Container  >
                 <HStack justifyContent="space-between">
                     <Box>
                         <Heading as='h2' size='xl'>

@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import { defineStyleConfig } from '@chakra-ui/react'
+import { defineStyleConfig, defineStyle } from '@chakra-ui/react'
 
 const Button = defineStyleConfig({
   // The styles all button have in common
@@ -57,9 +57,50 @@ white #FFFFFF;
 customegrey: #D9D9D6;
 
 */
+
+const sizes = {
+  lg: defineStyle({
+    maxW: 'container.xl',
+    py:'3',
+    px:'10',
+    bg:"transparent"
+    // p: '6',
+    // fontSize: 'lg',
+  }),
+}
+
+
+// const sizes = {
+//   sm: defineStyle({
+//     maxW: '45ch',
+//     p: '4',
+//   }),
+//   md: defineStyle({
+//     maxW: 'container.sm',
+//     p: '6',
+//     fontSize: 'lg',
+//   }),
+//   lg: defineStyle({
+//     maxW: '75ch',
+//     p: '8',
+//     fontSize: 'xl',
+//   }),
+// };
+
+const defaultProps = {
+  size: 'lg',
+}
+
+
+const Container = defineStyleConfig({
+  sizes,
+  defaultProps,
+})
+
 export const theme = extendTheme({
   components: {
     Button,
+    Container,
   },
   colors: {
     black: '#2C2C2C',

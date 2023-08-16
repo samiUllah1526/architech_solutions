@@ -13,12 +13,15 @@ import aboutUs1 from "@src/assets/aboutUs1.png"
 import { AboutUsBadgeSvg } from '@src/components/svgs'
 import { SectionTitle } from './SectionTitle'
 import { SectionSubTitle } from './SectionSubTitle'
+import { useMediaQuery } from '@chakra-ui/react'
 
 export const AboutUsSection = () => {
+    const [isTablet] = useMediaQuery('(max-width: 767px)')
+    console.log({ isTablet })
     return (
         <>
-            <Container maxW='90%' bg="transparent" py={3} id='aboutUs'>
-                <SimpleGrid columns={2} spacing={10}>
+            <Container id='aboutUs'>
+                <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
                     <Box>
                         <SectionTitle title='ABOUT US' />
                         <Box mb={10}></Box>
@@ -34,12 +37,12 @@ export const AboutUsSection = () => {
                             captivating, photorealistic
                             renderings that allow you to see
                             and feel the future space before
-                            it's even built.        
+                            it's even built.
                         </Text>
                         <Box mt={4} mb={0}></Box>
                     </Box>
 
-                    <Box position="relative" >
+                    {!isTablet && <Box position="relative" mt={{ base: 20, lg: 0 }}>
                         <SimpleGrid columns={2} spacing={10}>
                             <Box mt='-40px'>
                                 <Image objectFit='contain' src={aboutUs1} alt='Dan Abramov' />
@@ -51,10 +54,10 @@ export const AboutUsSection = () => {
                                 <Image objectFit='contain' src={aboutUs2} alt='Dan Abramov' />
                             </Box>
                         </SimpleGrid>
-                    </Box>
+                    </Box>}
                 </SimpleGrid>
                 <Box my={10}></Box>
-                <HStack justifyContent="space-between">
+                <HStack justifyContent="space-between" flexDirection={{ base: "column", md: "row" }}>
                     {
                         [
                             {
@@ -72,11 +75,11 @@ export const AboutUsSection = () => {
                         ]
                             .map((item, index) => {
                                 return (
-                                    <HStack key={index} spacing={4}>
-                                        <Heading as='h2' size='2xl'>
+                                    <HStack key={index} spacing={4} flexDirection={{ base: "column", xl: "row" }}>
+                                        <Heading textAlign="center" as='h2' size='2xl'>
                                             {item.number}
                                         </Heading>
-                                        <Text noOfLines={1} fontSize="14px ">
+                                        <Text textAlign="center" fontSize="14px ">
                                             {item.text}
                                         </Text>
                                     </HStack>

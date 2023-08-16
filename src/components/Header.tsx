@@ -62,8 +62,8 @@ export function Header() {
 
   return (
     <Box mb="20">
-      <Container maxW='90%' bg="transparent" py={3}>
-        <Box bg={useColorModeValue('transparent', 'gray.900')} px={4}>
+      <Container >
+        <Box bg={useColorModeValue('transparent', 'gray.900')}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
               size={'md'}
@@ -97,7 +97,7 @@ export function Header() {
           {isOpen ? (
             <Box pb={4} display={{ md: 'none' }}>
               <Stack as={'nav'} spacing={4}>
-                {leftLinks.map((link) => (
+                {leftLinks.concat(rightLinks).map((link) => (
                   <NavLink key={link.label} path={link.path}>{link.label}</NavLink>
                 ))}
               </Stack>

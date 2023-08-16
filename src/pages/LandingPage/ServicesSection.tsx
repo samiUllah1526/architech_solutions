@@ -2,11 +2,7 @@ import {
     Box,
     Text,
     Heading,
-    Center,
-    Image,
     Container,
-    HStack,
-    SimpleGrid,
     Card,
     CardBody,
     Grid,
@@ -19,8 +15,8 @@ import { SectionSubTitle } from './SectionSubTitle'
 export const ServicesSection = () => {
     return (
         <>
-            <Container id="services" maxW='90%' bg="transparent" py={3}>
-                <Box w="55%">
+            <Container id="services">
+                <Box w={{ base: "100%", lg: "55%" }}>
                     <Box>
                         <SectionTitle title='OUR SERVICES' />
                         <Box mb={10}></Box>
@@ -32,7 +28,7 @@ export const ServicesSection = () => {
                     </Box>
                 </Box>
                 <Box my={10}></Box>
-                <Grid templateColumns='repeat(4, 1fr)' gap={6}>
+                <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)', xl: 'repeat(4, 1fr)' }} gap={6}>
                     {
                         [
                             {
@@ -63,7 +59,7 @@ export const ServicesSection = () => {
                                             <CardBody>
                                                 {item.icon}
                                                 <Box my={10}></Box>
-                                                <Heading as='h2' size='md'>
+                                                <Heading as='h2' size='md' mb={5}>
                                                     {item.number}
                                                 </Heading>
                                                 <Text fontSize="14px ">
