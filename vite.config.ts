@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
       outDir: 'dist',
   },
-  publicDir: 'assets',
+  publicDir: 'assets/*/**',
   plugins: [react()],
   resolve: {
     alias: [{ find: '@src', replacement: path.resolve(__dirname, 'src') }],
