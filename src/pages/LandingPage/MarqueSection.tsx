@@ -33,10 +33,18 @@ export const MarqueSection = () => {
             <Box my={10}></Box>
             <Marquee>
                 {
-                    [g1, g2, g3, g4, g6, g7, g8, g9].map((item, index) => {
+                    [
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278613/galllery_7_fblnhk.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278615/galllery_9_inihf0.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278613/galllery_4_lstivu.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278615/galllery_8_dp3w2f.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278126/galllery_1_gkalsy.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278612/galllery_2_dcx3ba.jpg",
+                        "https://res.cloudinary.com/dxn2snoak/image/upload/w_1000/v1692278616/galllery_3_pvgs1g.jpg"
+                    ].map((item, index) => {
                         return (
                             <Box key={index} width={{base: "300px", md:"500px", lg: "1000px"}} mx={5} borderRadius="lg" overflow="hidden">
-                                <Image loading="lazy" src={item} objectFit="cover" objectPosition="center"></Image>
+                                <Image src={item} objectFit="cover" objectPosition="center"></Image>
                             </Box>
                         )
                     })
