@@ -19,14 +19,14 @@ export const ContactUsSection = () => {
                     <Text color="white" fontSize='18px' fontWeight='300px'>
                         If you are interested in our work and want to hire a project, contact us and ask for a price.
                     </Text>
-                    <Flex justifyContent="space-between" flexDirection={{base: "column", xl: "row"}} gap={10}>
-                    <Box >
-                            <Input my={10} placeholder='Your name'  size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
+                    <Flex justifyContent="space-between" flexDirection={{ base: "column", lg: "row" }} gap={10}>
+                        <Box maxW={{ base: "100%", lg: "50%" }}>
+                            <Input my={10} placeholder='Your name' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                             <Input mb={10} type="email" placeholder='Your email' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
-                            <Input mb={10} type="number" placeholder='Your number'   size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
+                            <Input mb={10} type="number" placeholder='Your number' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                             <Input placeholder='Message' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                         </Box>
-                        <Box height={{ base: "2px", xl:"325px"}} width={{base: "50%", xl:"2px"}} marginInline={{base: "auto", xl: "0"}} bg="white" />
+                        <Box  height={{ base: "2px", lg: "280px", }} width={{ base: "50%", lg: "2px" }} margin={{ base: "0 auto", lg: "auto 0" }} bg="white" />
                         <Box>
                             {
                                 [
