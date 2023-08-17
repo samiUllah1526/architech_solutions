@@ -35,8 +35,8 @@ export const MarqueSection = () => {
                 {
                     [g1, g2, g3, g4, g6, g7, g8, g9].map((item, index) => {
                         return (
-                            <Box key={index} width="1000px" mx={5} borderRadius="lg" overflow="hidden">
-                                <Image loading="lazy" src={item}></Image>
+                            <Box key={index} width={{base: "300px", md:"500px", lg: "1000px"}} mx={5} borderRadius="lg" overflow="hidden">
+                                <Image loading="lazy" src={item} objectFit="cover" objectPosition="center"></Image>
                             </Box>
                         )
                     })
@@ -55,7 +55,7 @@ export const MarqueSection = () => {
                     ].map((item, index) => {
                         const color = index % 2 === 0 ? "primary": "black"
                         return (
-                            <Text color={color} fontSize="48px" fontWeight="700" mx={5}>{ item}</Text>
+                            <Text color={color} fontSize={{ base: "24px", lg:"48px"}} fontWeight="700" mx={5}>{ item}</Text>
                         )
                     })
                 }
