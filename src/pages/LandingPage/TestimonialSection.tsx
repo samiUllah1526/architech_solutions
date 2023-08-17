@@ -18,13 +18,15 @@ export const TestimonialSection = () => {
     return (
         <>
             <Container>
-            <Box w={{ base: "100%", lg: "55%" }}>
+                <Box w={{ base: "100%", lg: "55%" }}>
                     <Box>
                         <SectionTitle title='OUR TESTIMONIALS' />
                         <Box mb={10}></Box>
                         <SectionSubTitle subTitle="What People thinks" />
                         <Box mb={10}></Box>
-                        <Text fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text>
+                        <Text fontSize='18px' fontWeight='300px'>
+                            Have a look at what some of our clients think about our work and design output
+                        </Text>
                     </Box>
                 </Box>
                 <Box my={10}></Box>
@@ -63,7 +65,7 @@ export const TestimonialSection = () => {
                             .map((item, index) => {
                                 return (
 
-                                    <Card key={index} p={{base: 0, lg:10}} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
+                                    <Card key={index} p={{ base: 0, lg: 10 }} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
                                         <CardBody>
                                             <HStack spacing={5} alignItems="center">
                                                 <QuotationMarkSvg colored={index % 2 === 0} />

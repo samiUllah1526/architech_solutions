@@ -78,9 +78,9 @@ export function Header() {
               ))}
             </HStack>
             <Box>
-              {/* <Logo /> */}
-              <Text style={{ fontFamily: "Syncopate" }}>architect</Text>
-              <Text style={{ fontFamily: "Syncopate" }}>Solutions</Text>
+              <Logo />
+              {/* <Text style={{ fontFamily: "Syncopate" }} textTransform="uppercase">architect</Text>
+              <Text style={{ fontFamily: "Syncopate" }} textTransform="uppercase">Solutions</Text> */}
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {rightLinks.map((link) => (

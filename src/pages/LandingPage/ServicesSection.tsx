@@ -22,9 +22,11 @@ export const ServicesSection = () => {
                         <Box mb={10}></Box>
                         <SectionSubTitle subTitle="We provide the best solutions for your dream home" />
                         <Box mb={10}></Box>
-                        <Text fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text>
-                        <Box mt={4} mb={0}></Box>
-                        <Text fontSize='18px' fontWeight='300px'>Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.</Text>
+                        <Text fontSize='18px' fontWeight='300px'>
+                        We specialize in delivering tailored solutions to bring your dream home to life. Our comprehensive services span from interior and architectural design to renovations, remodeling, and landscaping.
+                        </Text>
+                        {/* <Box mt={4} mb={0}></Box>
+                        <Text fontSize='18px' fontWeight='300px'>Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.</Text> */}
                     </Box>
                 </Box>
                 <Box my={10}></Box>
