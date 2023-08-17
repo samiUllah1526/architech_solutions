@@ -46,10 +46,13 @@ const NavLink = (props: NavLinkProps) => {
       px={2}
       py={1}
       fontWeight='500'
+      color="primary"
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
+        transition: "0.5s",
+        bg: useColorModeValue('#d0920091', 'gray.700'),
+        color: "white",
       }}
       href={path}>
       {children}
