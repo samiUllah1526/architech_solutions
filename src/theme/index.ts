@@ -64,31 +64,11 @@ const sizes = {
     py:'3',
     px:'10',
     bg:"transparent"
-    // p: '6',
-    // fontSize: 'lg',
   }),
 }
 
-
-// const sizes = {
-//   sm: defineStyle({
-//     maxW: '45ch',
-//     p: '4',
-//   }),
-//   md: defineStyle({
-//     maxW: 'container.sm',
-//     p: '6',
-//     fontSize: 'lg',
-//   }),
-//   lg: defineStyle({
-//     maxW: '75ch',
-//     p: '8',
-//     fontSize: 'xl',
-//   }),
-// };
-
 const defaultProps = {
-  size: 'lg',
+  size: 'lg' as const ,
 }
 
 
