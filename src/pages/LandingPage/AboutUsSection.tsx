@@ -61,15 +61,15 @@ export const AboutUsSection = () => {
                     {
                         [
                             {
-                                number: "100%",
+                                number: "96%",
                                 text: "SATISFITATION CLIENTS"
                             },
                             {
-                                number: "250",
+                                number: "12",
                                 text: "EMPLOYEES ON WORLDWIDE"
                             },
                             {
-                                number: "3469",
+                                number: "34",
                                 text: "PROJECTS COMPLETED ON 60 COUNTRIES"
                             },
                         ]

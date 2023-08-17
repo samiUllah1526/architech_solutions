@@ -24,8 +24,8 @@ export const WorkflowSection = () => {
                                 <SectionTitle title='OUR WORKFLOW' />
                                 <Box mb={10}></Box>
                                 <SectionSubTitle subTitle="How We Work" />
-                                <Box mb={10}></Box>
-                                <Text fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text>
+                                {/* <Box mb={10}></Box>
+                                <Text fontSize='18px' fontWeight='300px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</Text> */}
                             </Box>
                         </Box>
                         <Box my={10}></Box>
@@ -35,18 +35,17 @@ export const WorkflowSection = () => {
                                     {
                                         number: "01",
                                         title: 'Statement of the problem',
-                                        text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                        text: "Understanding the client needs and challenges for the project"
                                     },
                                     {
                                         number: "02",
                                         title: 'Project presentation',
-
-                                        text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                        text: "Project presentation and updates on design constantly provided to the clients"
                                     },
                                     {
                                         number: "03",
-                                        title: "Landscape and urban Design",
-                                        text: "Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."
+                                        title: "PROJECT DELIVERY",
+                                        text: "All the design outputs and source files provided to the clients "
                                     },
                                 ]
                                     .map((item, index) => {
@@ -57,10 +56,10 @@ export const WorkflowSection = () => {
                                                         {item.number}
                                                     </Heading>
                                                     <Box my={5}></Box>
-                                                    <Heading as='h2' size='md'>
+                                                    <Heading as='h2' size='md' textTransform="uppercase">
                                                         {item.title}
                                                     </Heading>
-                                                    <Box my={10}></Box>
+                                                    <Box my={5}></Box>
                                                     <Text fontSize="14px ">
                                                         {item.text}
                                                     </Text>

@@ -13,7 +13,7 @@ export const HeroSection = () => {
         <>
             <Container>
                 <Heading textAlign="center" as='h1' size={{ base: 'xl', xl: '4xl' }} noOfLines={{ lg: 1 }}>
-                    Make your home an ode to joy
+                    Building Dreams, Crafting Spaces: Your Vision, Our Architecture
                 </Heading>
                 <Box mt={10} mb={10}></Box>
                 <Text align="center">
