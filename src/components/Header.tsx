@@ -27,11 +27,11 @@ type NavLink = {
 const leftLinks: NavLink[] = [
   { label: 'home', path: "#home" },
   { label: 'services', path: "#services" },
-  { label: 'clients', path: "#clients" }
+  { label: 'our testimonials', path: "#testimonials" }
 ]
 
 const rightLinks: NavLink[] = [
-  { label: 'about Us', path: '#aboutUs' },
+  { label: 'about us', path: '#aboutUs' },
   { label: 'gallery', path: '#gallery' },
   { label: "contact us", path: "#contactUs" }
 ]

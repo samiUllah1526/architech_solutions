@@ -41,7 +41,7 @@ export const ContactUsSection = () => {
                                     },
                                     {
                                         label: "E-mail",
-                                        content: "lenaDelphine@architechsolution.com"
+                                        content: "lenadelphine@architechsolution.com"
 
                                     },
                                     {

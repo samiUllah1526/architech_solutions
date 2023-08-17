@@ -8,7 +8,7 @@ import {
     Grid,
     GridItem
 } from '@chakra-ui/react'
-import { ManagementServiceSvg, RenovationServiceSvg, DesignServiceSvg } from '@src/components/svgs';
+import { ManagementServiceSvg, RenovationServiceSvg, DesignServiceSvg, DeliverySvg} from '@src/components/svgs';
 import { SectionTitle } from './SectionTitle'
 import { SectionSubTitle } from './SectionSubTitle'
 
@@ -49,7 +49,7 @@ export const ServicesSection = () => {
                                 text: "Building upon the initial concepts, we refine the design based on your feedback and preferences. This iterative process ensures that the evolving design aligns perfectly with your expectations and aspirations."
                             },
                             {
-                                icon: <ManagementServiceSvg />,
+                                icon: <DeliverySvg />,
                                 number: "Delivery",
                                 text: "Once the 3D models and renderings are perfected, we deliver the final files to you. These files can be used for presentations, marketing materials, investor pitches, and more."
                             },

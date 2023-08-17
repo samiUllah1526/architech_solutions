@@ -17,7 +17,7 @@ import { Carousel, QuotationMarkSvg } from '@src/components/svgs';
 export const TestimonialSection = () => {
     return (
         <>
-            <Container>
+            <Container id="testimonials">
                 <Box w={{ base: "100%", lg: "55%" }}>
                     <Box>
                         <SectionTitle title='OUR TESTIMONIALS' />
