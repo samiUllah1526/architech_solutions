@@ -11,13 +11,35 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
+import { Logo } from './svgs'
 
 
-const leftLinks = ['home', 'projects', 'clients']
-const rightLinks = ['about Us', 'gallery']
+type NavLinkProps = {
+  children: React.ReactNode,
+  path: string
+}
 
-const NavLink = (props: Props) => {
-  const { children } = props
+type NavLink = {
+  label: string,
+  path: string
+}
+
+const leftLinks: NavLink[] = [
+  { label: 'home', path: "#home" },
+  { label: 'services', path: "#services" },
+  { label: 'clients', path: "#clients" }
+]
+
+const rightLinks: NavLink[] = [
+  { label: 'about Us', path: '#aboutUs' },
+  { label: 'gallery', path: '#gallery' },
+  { label: "contact us", path: "#contactUs" }
+]
+
+
+
+const NavLink = (props: NavLinkProps) => {
+  const { children, path } = props
   return (
     <Box
       as="a"
@@ -29,7 +51,7 @@ const NavLink = (props: Props) => {
         textDecoration: 'none',
         bg: useColorModeValue('gray.200', 'gray.700'),
       }}
-      href={'#'}>
+      href={path}>
       {children}
     </Box>
   )
@@ -40,8 +62,8 @@ export function Header() {
 
   return (
     <Box mb="20">
-      <Container maxW='90%' bg="transparent" py={3}>
-        <Box bg={useColorModeValue('transparent', 'gray.900')} px={4}>
+      <Container >
+        <Box bg={useColorModeValue('transparent', 'gray.900')}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
               size={'md'}
@@ -52,30 +74,31 @@ export function Header() {
             />
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {leftLinks.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.label} path={link.path}>{link.label}</NavLink>
               ))}
             </HStack>
             <Box>
+              {/* <Logo /> */}
               <Text style={{ fontFamily: "Syncopate" }}>architect</Text>
               <Text style={{ fontFamily: "Syncopate" }}>Solutions</Text>
             </Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {rightLinks.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.label} path={link.path}>{link.label}</NavLink>
               ))}
-              <Button
+              {/* <Button
               size='md'
                 variant='solid'
                 rightIcon={<AddIcon />}
-              >Contact US</Button>
+              >Contact US</Button> */}
             </HStack>
           </Flex>
 
           {isOpen ? (
             <Box pb={4} display={{ md: 'none' }}>
               <Stack as={'nav'} spacing={4}>
-                {leftLinks.map((link) => (
-                  <NavLink key={link}>{link}</NavLink>
+                {leftLinks.concat(rightLinks).map((link) => (
+                  <NavLink key={link.label} path={link.path}>{link.label}</NavLink>
                 ))}
               </Stack>
             </Box>

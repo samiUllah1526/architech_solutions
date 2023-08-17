@@ -9,9 +9,18 @@
   padding: 0;
   box-sizing: border-box;
   background: '#ffffff';
+  scroll-behavior: smooth;
 }
 
 .slick-track {
   display: flex !important;
-  gap: 10px;
+  align-items: stretch !important;
+  /* gap: 10px; */
 }
+
+@media screen and (min-width: 480px) {
+  .slick-track {
+    gap: 10px;
+  }
+}
+
