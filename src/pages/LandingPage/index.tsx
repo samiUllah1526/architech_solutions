@@ -25,10 +25,10 @@ export const LandingPage = () => {
       <Box my={20}></Box>
       <TestimonialSection />
       <Box my={20}></Box>
-
-      {/* <Box my={-48}></Box> */}
-      {/* <StartProjectSection />
-      <Box my={20}></Box> */}
+      {/* THESE BELOW SECTION WILL BE AVAILABLE AFTER BE IS DONE FOR THEM */}
+      {/* <Box my={-40}></Box>
+     <StartProjectSection />
+      <Box my={20}></Box>  */}
       {/* <KickStartSection />
       <Box my={20}></Box> */}
       <ContactUsSection />
