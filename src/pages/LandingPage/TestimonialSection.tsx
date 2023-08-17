@@ -2,15 +2,12 @@ import {
     Box,
     Text,
     Heading,
-    Center,
-    Image,
     Container,
     HStack,
-    SimpleGrid,
     Card,
     CardBody,
 } from '@chakra-ui/react'
-import workflowBg from '@src/assets/workflow-bg.png';
+
 import { SectionTitle } from './SectionTitle'
 import { SectionSubTitle } from './SectionSubTitle'
 import { Carousel, QuotationMarkSvg } from '@src/components/svgs';
@@ -66,7 +63,7 @@ export const TestimonialSection = () => {
                             .map((item, index) => {
                                 return (
 
-                                    <Card key={index} p={10} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
+                                    <Card key={index} p={{base: 0, lg:10}} variant='elevated' sx={{ border: '1px solid #E6D8CC' }}>
                                         <CardBody>
                                             <HStack spacing={5} alignItems="center">
                                                 <QuotationMarkSvg colored={index % 2 === 0} />
@@ -78,7 +75,6 @@ export const TestimonialSection = () => {
                                                         {item.designation}
                                                     </Heading> */}
                                                 </Box>
-
                                             </HStack>
                                             <Box my={5}></Box>
                                             <Text fontSize="14px ">
