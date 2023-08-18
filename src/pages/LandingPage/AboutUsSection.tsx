@@ -2,14 +2,15 @@ import {
     Box,
     Text,
     Heading,
-    Center,
     Image,
     Container,
     HStack,
     SimpleGrid,
+    Grid,
+    GridItem,
 } from '@chakra-ui/react'
-import aboutUs2 from "@src/assets/aboutUs2.png"
-import aboutUs1 from "@src/assets/aboutUs1.png"
+import aboutUs2 from "@src/assets/aboutus_1.jpeg"
+import aboutUs1 from "@src/assets/aboutus_2.jpeg"
 import { AboutUsBadgeSvg } from '@src/components/svgs'
 import { SectionTitle } from './SectionTitle'
 import { SectionSubTitle } from './SectionSubTitle'
@@ -17,6 +18,7 @@ import { useMediaQuery } from '@chakra-ui/react'
 
 export const AboutUsSection = () => {
     const [isTablet] = useMediaQuery('(max-width: 767px)')
+    const [isAbove1200] = useMediaQuery('(min-width: 1200px)')
     console.log({ isTablet })
     return (
         <>
@@ -42,18 +44,35 @@ export const AboutUsSection = () => {
                         <Box mt={4} mb={0}></Box>
                     </Box>
 
-                    {!isTablet && <Box position="relative" mt={{ base: 20, lg: 0 }}>
-                        <SimpleGrid columns={2} spacing={10}>
-                            <Box mt='-40px'>
-                                <Image objectFit='contain' src={aboutUs1} alt='Dan Abramov' />
-                                <Box position="absolute" top="-100px" left="300px">
+                    {!isTablet && <Box position="relative" >
+                        <Grid
+                            // marginLeft={10}
+                            // marginRight={10}
+                            templateRows='repeat(5, 100px)'
+                            templateColumns={{ base: 'repeat(1, 250px)', xl: 'repeat(2, 250px)' }}
+                            columnGap={5}
+                        >
+
+                            <GridItem rowStart={1} rowEnd={{ base: 6, xl: 5 }} colSpan={{base: 2, xl: 1}}>
+                                <Image objectFit='cover' objectPosition="center" height="100%" src={aboutUs1} alt='about us image' />
+                                {isAbove1200 && <Box position="absolute" top="-80px" left="250px">
+                                    <AboutUsBadgeSvg />
+                                </Box>}
+                            </GridItem>
+                            {isAbove1200 && <GridItem rowStart={2} rowEnd={6} colStart={2}>
+                                <Image objectFit='cover' objectPosition="center" height="100%"   src={aboutUs2} alt='about us image' />
+                            </GridItem> }
+
+                            {/* <GridItem rowStart={1} rowEnd={5} colSpan={1}>
+                                <Image objectFit='cover' objectPosition="center" height="100%" src={aboutUs1} alt='about us image' />
+                                <Box position="absolute" top="-80px" left="250px">
                                     <AboutUsBadgeSvg />
                                 </Box>
-                            </Box>
-                            <Box mt='60px'>
-                                <Image objectFit='contain' src={aboutUs2} alt='Dan Abramov' />
-                            </Box>
-                        </SimpleGrid>
+                            </GridItem>
+                            <GridItem rowStart={2} rowEnd={6} colStart={2}>
+                                <Image objectFit='cover' objectPosition="center" height="100%"   src={aboutUs2} alt='about us image' />
+                            </GridItem> */}
+                        </Grid>
                     </Box>}
                 </SimpleGrid>
                 <Box my={10}></Box>

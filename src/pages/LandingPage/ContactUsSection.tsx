@@ -26,7 +26,7 @@ export const ContactUsSection = () => {
                             <Input mb={10} type="number" placeholder='Your number' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                             <Input placeholder='Message' size='md' variant='flushed' color="white" borderColor="white" focusBorderColor="white" />
                         </Box>
-                        <Box  height={{ base: "2px", lg: "280px", }} width={{ base: "50%", lg: "2px" }} margin={{ base: "0 auto", lg: "auto 0" }} bg="white" />
+                        <Box  height={{ base: "2px", lg: "280px", }} width={{ base: "50%", lg: "2px" }} margin={{ base: "0 auto", lg: "auto 0" }} bg="primary" />
                         <Box>
                             {
                                 [

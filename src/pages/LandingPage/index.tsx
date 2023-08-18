@@ -14,7 +14,7 @@ export const LandingPage = () => {
   return (
     <>
       <HeroSection />
-      <Box my={56}></Box>
+      <Box my={{base: 20, xl: 40}}></Box>
       <AboutUsSection />
       <Box my={20}></Box>
       <ServicesSection />
@@ -24,7 +24,7 @@ export const LandingPage = () => {
       <MarqueSection />
       <Box my={20}></Box>
       <TestimonialSection />
-      <Box my={20}></Box>
+      <Box my={{base: -40, lg: 10}}></Box>
       {/* THESE BELOW SECTION WILL BE AVAILABLE AFTER BE IS DONE FOR THEM */}
       {/* <Box my={-40}></Box>
      <StartProjectSection />
